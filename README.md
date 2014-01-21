@@ -1,3 +1,8 @@
+Background
+==========
+
+Please read the Lothar document.
+
 Building and installing
 =======================
 
@@ -35,7 +40,7 @@ And you can install the python module:
     $ python setup.py build
     $ python setup.py install
 
-Playing
+playing
 =======
 
 To start writing your applications, Lothars core program is written in C. Its headers should have
