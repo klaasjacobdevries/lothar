@@ -1,0 +1,22 @@
+#cmakedefine HAVE_LIBUSB
+#cmakedefine HAVE_LIBUSBX
+#cmakedefine HAVE_LIBUSB_0_1
+
+#if !defined(HAVE_LIBUSB) && !defined(HAVE_LIBUSBX) && !defined(HAVE_LIBUSB_0_1)
+#define DUMMY_USB
+#endif
+
+#cmakedefine HAVE_BLUEZ
+#cmakedefine HAVE_WIN32_BLUETOOTH
+
+#if !defined(HAVE_BLUEZ) && !defined(HAVE_WIN32_BLUETOOTH)
+#define DUMMY_BLUETOOTH
+#endif
+
+// for c++ wrapper
+#cmakedefine HAVE_SHARED_PTR
+
+// inline support in C may depend on your compiler
+#ifdef _MSC_VER
+#define inline __inline
+#endif
